@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { IdkService } from './idk.service';
-import { IdkController } from './idk.controller';
+import { IdkModule } from './idk/idk.module';
 @Module({
-  imports: [],
-  controllers: [AppController, IdkController],
-  providers: [AppService, IdkService],
+  imports: [IdkModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

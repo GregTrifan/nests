@@ -11,6 +11,6 @@ export class IdkController {
   }
   @Post()
   getIdk(): number {
-    return 52;
+    return this.idkService.getInt();
   }
 }
